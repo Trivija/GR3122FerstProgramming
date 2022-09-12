@@ -2,13 +2,14 @@
 //Напишите программу, которая принимает на вход трёхзначное число и на выходе
 //показывает последнюю цифру этого числа.
 
+Console.Write ("Введите три числа:" ); 
 
-string? inputLine = Console.ReadLine();              //ввести значение //
+string inputLine = Console.ReadLine()??"";            //ввести значение //
 
-if (inputLine != null)                               //!= не равно//
+//if (inputLine != null)                          //!= не равно//
 {
-    int inputNumber = int.Parse(inputLine);          // int inputNamber выбор переменной////int.Parse(inputLine - преврати строкус в число //
-    if (inputNumber > 99 && inputNumber < 1000)
+    int inputNumber = int.Parse(inputLine);  // int inputNamber выбор переменной////int.Parse(inputLine - преврати строкус в число //
+    if (inputNumber > 99 && inputNumber<1000)
    {
     int lastDigit = inputNumber % 10;
     Console.Write(lastDigit);
