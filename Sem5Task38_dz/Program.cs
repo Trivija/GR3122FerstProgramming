@@ -8,12 +8,15 @@
 // Метод считывания данных пользователя
 // Задайте массив вещественных чисел.
 // Найдите разницу между максимальным и минимальным элементов массива.
+
 double [] FillArray (int arrLength, int arrMaxNum, int arrMinNum)
+//Генератор случайных чисел
  {
-    Random rand = new Random(); //Генератор случайных чисел
+    Random rand = new Random(); 
     double[] array = new double[arrLength];
 
-    for (int i = 0; i < arrLength; i++) // проходим по всему массиву
+// идем по всему массиву
+    for (int i = 0; i < arrLength; i++) 
     {
         array[i] = Math.Round (rand.NextDouble() *100,2);
     }
@@ -35,7 +38,7 @@ double MaxMin (double[] arr)
 {
    double махNum = int.MinValue;
    double minNum =  int.MaxValue;
-    for (int i = 0; i < arr.Length; i++)// проходим gj vfccbde
+    for (int i = 0; i < arr.Length; i++)// 
     {
          if (arr[i] > махNum) // если элемент массива больше мах числа
          {
@@ -56,6 +59,6 @@ void PrintData(string line)
     Console.WriteLine(line);
  }
 double[] array = FillArray (20,10,2);
-Print1DArray (array); // печатает массив
+Print1DArray (array); // печать массива
 double sumArray = MaxMin (array); 
 PrintData ("Разница максимального и минимального элементов: " + sumArray);
