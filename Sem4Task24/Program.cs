@@ -4,7 +4,7 @@
 // чисел от 1 до А.
 //=============================================================================
 
-int ReadData(string line) // получаем число А 
+int ReadData(string line) // метод который выведет число А (везде его копируем)
 {
     // выводим сообщение
     Console.WriteLine(line);
@@ -13,20 +13,21 @@ int ReadData(string line) // получаем число А
     // возвращаем значение
     return numberA;
 }
-// метод вывода результата
+// метод который выводит результата (везде один)
 void PrintResult(string line)
 {
     Console.WriteLine(line);
 }
 
-int VariantSumSimple(int numA)
+int VariantSumSimple(int numA) //метод выдаст сумму,
+// передаем ему число от какого и до какого
 {
-    int sumOfNumbers =0;
-    for (int i=1;i<=numA;i++)
+    int sumOfNumbers =0; //переменная в которую будем накапливать
+    for (int i=1;i<=numA;i++)//по такое число пока мы его не достигнем по 1
     {
         sumOfNumbers+=i;
         }
-return sumOfNumbers;
+return sumOfNumbers;//вернет
 }
 
 int VariantSumGaus (int numA)
